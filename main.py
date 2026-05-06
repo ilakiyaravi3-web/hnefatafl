@@ -59,17 +59,36 @@ def main():
     game_state = None
     hud_state = None
     winner_text = None
+    attacker_ctrl = "mcts"
+    defender_ctrl = "mcts"
 
     # --- PERSON A CHANGE: function to start game from setup screen ---
     def start_game_from_menu(config):
-        nonlocal in_game, game_state, hud_state, winner_text
+        nonlocal in_game, game_state, hud_state, winner_text, attacker_ctrl, defender_ctrl, replay_moves
 
         in_game = True
         winner_text = None
+        replay_moves = []
 
         # Reset game state
         game_state = HnefataflState()
         hud_state = HUDState()
+        
+        # Handle AI vs AI mode: extract agent types from config
+        if "attacker" in config and "defender" in config:
+            attacker_ctrl = config["attacker"].lower()
+            defender_ctrl = config["defender"].lower()
+        elif "side" in config and "agent" in config:
+            # Human vs AI mode: set up human vs agent
+            if config["side"] == "Attacker":
+                attacker_ctrl = "human"
+                defender_ctrl = config["agent"].lower()
+            else:
+                attacker_ctrl = config["agent"].lower()
+                defender_ctrl = "human"
+        
+        # Trigger first AI move if needed
+        _start_ai_if_needed()
 
     # --- PERSON A CHANGE: register callback ---
     screen_manager.game_callback = start_game_from_menu
@@ -104,11 +123,22 @@ def main():
         ai_thinking = False
 
     def _start_ai_if_needed():
-        nonlocal ai_thinking
+        nonlocal ai_thinking, attacker_ctrl, defender_ctrl
         if not in_game or winner_text:
             return
 
         turn = game_state.current_player()
+        
+        # Check if current player should be controlled by AI
+        is_ai_turn = False
+        if turn == "attacker" and attacker_ctrl != "human":
+            is_ai_turn = True
+        elif turn == "defender" and defender_ctrl != "human":
+            is_ai_turn = True
+        
+        if not is_ai_turn:
+            return
+        
         if not ai_thinking:
             ai_thinking = True
             ai_result[0] = None
@@ -120,10 +150,17 @@ def main():
 
         new_state = game_state.apply_move(move)
         game_state = new_state
+        replay_moves.append(move)
 
-        if game_state.get_winner():
-            winner_text = "Game Over"
-
+        winner = game_state.get_winner()
+        if winner:
+            if winner == "attacker":
+                winner_text = "Attackers Win!"
+            elif winner == "defender":
+                winner_text = "Defenders Win!"
+            else:
+                winner_text = "Draw"
+        
         _start_ai_if_needed()
 
     def get_legal_moves_fn(board, pos):
