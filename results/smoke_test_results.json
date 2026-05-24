@@ -1,0 +1,203 @@
+{
+  "results": [
+    {
+      "attacker": "mcts_full",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.55,
+      "timestamp": "2026-05-24T19:10:35"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_full",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 174,
+      "duration_s": 17.91,
+      "timestamp": "2026-05-24T19:10:53"
+    },
+    {
+      "attacker": "minimax",
+      "defender": "random",
+      "winner": "attacker",
+      "attacker_won": 1,
+      "defender_won": 0,
+      "draw": 0,
+      "move_count": 43,
+      "duration_s": 440.25,
+      "timestamp": "2026-05-24T19:18:13"
+    },
+    {
+      "attacker": "random",
+      "defender": "minimax",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 22,
+      "duration_s": 371.91,
+      "timestamp": "2026-05-24T19:24:25"
+    },
+    {
+      "attacker": "heuristic",
+      "defender": "random",
+      "winner": "attacker",
+      "attacker_won": 1,
+      "defender_won": 0,
+      "draw": 0,
+      "move_count": 57,
+      "duration_s": 0.21,
+      "timestamp": "2026-05-24T19:24:25"
+    },
+    {
+      "attacker": "random",
+      "defender": "heuristic",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 0.06,
+      "timestamp": "2026-05-24T19:24:26"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_full",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 70,
+      "duration_s": 7.19,
+      "timestamp": "2026-05-24T19:24:33"
+    },
+    {
+      "attacker": "mcts_full",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.34,
+      "timestamp": "2026-05-24T19:24:53"
+    },
+    {
+      "attacker": "mcts_no_escape",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.41,
+      "timestamp": "2026-05-24T19:25:13"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_no_escape",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 200,
+      "duration_s": 20.6,
+      "timestamp": "2026-05-24T19:25:34"
+    },
+    {
+      "attacker": "mcts_no_corner",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.4,
+      "timestamp": "2026-05-24T19:25:54"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_no_corner",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 30,
+      "duration_s": 3.1,
+      "timestamp": "2026-05-24T19:25:58"
+    },
+    {
+      "attacker": "mcts_no_prox",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.47,
+      "timestamp": "2026-05-24T19:26:18"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_no_prox",
+      "winner": "defender",
+      "attacker_won": 0,
+      "defender_won": 1,
+      "draw": 0,
+      "move_count": 126,
+      "duration_s": 13.0,
+      "timestamp": "2026-05-24T19:26:31"
+    },
+    {
+      "attacker": "mcts_no_piece",
+      "defender": "random",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.36,
+      "timestamp": "2026-05-24T19:26:51"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_no_piece",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.51,
+      "timestamp": "2026-05-24T19:27:12"
+    },
+    {
+      "attacker": "mcts_no_mob",
+      "defender": "random",
+      "winner": "attacker",
+      "attacker_won": 1,
+      "defender_won": 0,
+      "draw": 0,
+      "move_count": 109,
+      "duration_s": 11.28,
+      "timestamp": "2026-05-24T19:27:23"
+    },
+    {
+      "attacker": "random",
+      "defender": "mcts_no_mob",
+      "winner": null,
+      "attacker_won": 0,
+      "defender_won": 0,
+      "draw": 1,
+      "move_count": 200,
+      "duration_s": 20.65,
+      "timestamp": "2026-05-24T19:27:44"
+    }
+  ],
+  "failures": []
+}
